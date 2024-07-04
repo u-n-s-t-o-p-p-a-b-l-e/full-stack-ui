@@ -1,0 +1,11 @@
+/home/i/full-stack-ui/rust-framework/rust-tera-rocket/target/debug/deps/libparse_zoneinfo-0528c4dce73a9f89.rmeta: /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs
+
+/home/i/full-stack-ui/rust-framework/rust-tera-rocket/target/debug/deps/libparse_zoneinfo-0528c4dce73a9f89.rlib: /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs
+
+/home/i/full-stack-ui/rust-framework/rust-tera-rocket/target/debug/deps/parse_zoneinfo-0528c4dce73a9f89.d: /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs /home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs
+
+/home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs:
+/home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs:
+/home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs:
+/home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs:
+/home/i/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs:
