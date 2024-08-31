@@ -87,6 +87,14 @@ fn not_found() -> Response {
 fn handle_connection(mut stream: TcpStream, router: Arc<Router>) {
     let request = parse_request(&stream);
     let response = router.handle_request(&request);
+
+    let  response_string = format!(
+        "HTTP/1.1 {} OK\r\nContent-Length: {}\r\n\r\n",
+        response.status_code,
+        response.body.len()
+    );
+
+
 }
 
 
