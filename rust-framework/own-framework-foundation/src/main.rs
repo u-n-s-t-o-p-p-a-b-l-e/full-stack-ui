@@ -22,6 +22,10 @@ struct Response {
     body: Vec<u8>,
 }
 
+struct Router {
+    routes: HashMap<String, HandlerFunction>,
+}
+
 
 
 
@@ -30,3 +34,5 @@ struct Response {
 fn main() {
 
 }
+
+
