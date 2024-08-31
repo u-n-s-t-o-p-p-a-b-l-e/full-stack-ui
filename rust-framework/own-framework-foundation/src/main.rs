@@ -94,7 +94,9 @@ fn handle_connection(mut stream: TcpStream, router: Arc<Router>) {
         response.body.len()
     );
 
-
+    stream.write(response_string.as_bytes()).unwrap();
+    stream.write(&response.body).unwrap();
+    stream.flush().unwrap();
 }
 
 
