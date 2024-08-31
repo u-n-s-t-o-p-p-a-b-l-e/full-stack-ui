@@ -116,6 +116,9 @@ fn main() {
 
     let router = Arc::new(router);
 
+    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
+    println!("Server running on http://127.0.0.11:7878");
+
 }
 
 
