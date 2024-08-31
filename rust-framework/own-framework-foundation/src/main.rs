@@ -45,6 +45,14 @@ impl Router {
     }
 }
 
+fn parse_request(mut stream: &TcpStream) -> Request {
+    let mut buffer = [0; 1024];
+    stream.read(&mut buffer).unwrap();
+
+    let request_str = String::from_utf8_lossy(&buffer[..]);
+    let mut lines = request_str.lines();
+}
+
 
 
 
