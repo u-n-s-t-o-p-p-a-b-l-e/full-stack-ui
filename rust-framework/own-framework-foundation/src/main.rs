@@ -56,6 +56,24 @@ fn parse_request(mut stream: &TcpStream) -> Request {
     let mut parts =first_line.split_whitespace();
     let method = parts.next().unwrap_or("").to_string();
     let path = parts.next().unwrap_or("").to_string();
+
+    let mut headers = HashMap::new();
+    for line in lines {
+        if line.is_empty() {
+            break;
+        }
+        let mut parts = line.splitn(2, ": ");
+        if let (Some(key), Some(value)) = (parts.next(), parts.next()) {
+            headers.insert(key.to_string(), value.to_string());
+        }
+    }
+
+    Request {
+        method,
+        path,
+        headers,
+        body: Vec::new(),
+    }
 }
 
 
