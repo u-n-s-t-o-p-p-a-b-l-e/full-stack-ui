@@ -14,3 +14,19 @@ struct Request {
     headers: HashMap<String, String>,
     body: Vec<u8>,
 }
+
+#[allow(dead_code)]
+struct Response {
+    status_code: u16,
+    headers: HashMap<String, String>,
+    body: Vec<u8>,
+}
+
+
+
+
+
+
+fn main() {
+
+}
