@@ -51,6 +51,11 @@ fn parse_request(mut stream: &TcpStream) -> Request {
 
     let request_str = String::from_utf8_lossy(&buffer[..]);
     let mut lines = request_str.lines();
+
+    let first_line = lines.next().unwrap_or("");
+    let mut parts =first_line.split_whitespace();
+    let method = parts.next().unwrap_or("").to_string();
+    let path = parts.next().unwrap_or("").to_string();
 }
 
 
