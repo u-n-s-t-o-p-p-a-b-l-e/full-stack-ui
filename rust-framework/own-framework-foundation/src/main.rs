@@ -26,6 +26,25 @@ struct Router {
     routes: HashMap<String, HandlerFunction>,
 }
 
+impl Router {
+    fn new() -> Self {
+        Router {
+            routes: HashMap::new(),
+        }
+    }
+
+    fn add_route(&mut self, path: &str, handler: HandlerFunction) {
+        self.routes.insert(path.to_string(), handler);
+    }
+
+    fn handle_request(&self, request: &Request) -> Response {
+        match self.routes.get(&request.path) {
+            Some(handler) => handler(request),
+            None => not_found(),
+        }
+    }
+}
+
 
 
 
