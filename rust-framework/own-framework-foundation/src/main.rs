@@ -76,6 +76,19 @@ fn parse_request(mut stream: &TcpStream) -> Request {
     }
 }
 
+fn not_found() -> Response {
+    Response {
+        status_code: 404,
+        headers: HashMap::new(),
+        body: b"404 Not Found".to_vec(),
+    }
+}
+
+fn handle_connection(mut stream: TcpStream, router: Arc<Router>) {
+    let request = parse_request(&stream);
+    let response = router.handle_request(&request);
+}
+
 
 
 
