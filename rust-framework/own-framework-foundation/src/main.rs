@@ -99,12 +99,14 @@ fn handle_connection(mut stream: TcpStream, router: Arc<Router>) {
     stream.flush().unwrap();
 }
 
-
-
-
-
-
 fn main() {
+    let mut router = Router::new();
+
+    router.add_route("/", |_| Response {
+        status_code: 200,
+        headers: HashMap::new(),
+        body: b"Welcome to the home page!".to_vec(),
+    });
 
 }
 
