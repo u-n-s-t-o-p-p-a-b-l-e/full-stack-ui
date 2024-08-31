@@ -108,6 +108,14 @@ fn main() {
         body: b"Welcome to the home page!".to_vec(),
     });
 
+    router.add_route("/about", |_| Response {
+        status_code: 200,
+        headers: HashMap::new(),
+        body: b"This is the about page.".to_vec(),
+    });
+
+    let router = Arc::new(router);
+
 }
 
 
