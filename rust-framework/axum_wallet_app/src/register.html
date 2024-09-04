@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Register Page</h1>
+	<form action="/register" method="post">
+		<label for="mobile_no">What's your mobile number?</label>
+		<input type="text" id="mobile_no" name="mobil_no"><br>
+		<input type="submit" value="register">
+	</form>
+
+	<div id="result" class="{{class}}">
+		{{result_message}}
+	</div>
+
+</body>
+</html>
