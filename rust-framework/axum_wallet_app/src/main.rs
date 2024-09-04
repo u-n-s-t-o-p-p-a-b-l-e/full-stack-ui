@@ -9,10 +9,14 @@ use std::net::SocketAddr;
 use tower::ServiceBuilder;
 use tower_http::trace::TraceLayer;
 
+mod register;
+use register::show_register_form;
+
 #[tokio::main]
 async fn main() {
     let app = Router::new()
         .route("/", get(index_page))
+        .route("/register", get(show_register_form))
         .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()));
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
