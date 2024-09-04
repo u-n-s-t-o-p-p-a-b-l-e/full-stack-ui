@@ -1,2 +1,4 @@
+/rust-framework/axum_wallet_app/target
+/rust-framework/axum_wallet_app/Cargo.lock
 /rust-framework/own-framework-foundation/target
 /rust-framework/own-framework-foundation/Cargo.lock
