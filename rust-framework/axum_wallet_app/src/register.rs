@@ -19,3 +19,19 @@ pub async fn show_register_form() -> impl IntoResponse {
 
     Html(show_form)
 }
+
+
+pub async fn process_registration(Form(form): Form<RegisterForm>) -> impl IntoResponse {
+    let toggle_form = "hide_form";
+    let result_message = format!("Registration succesful with your mobile no: {}", form.mobile_no);
+
+    let html_content = fs::read_to_string("src/register.html")
+        .expect("Failed to read HTML file");
+
+    let updated_html = html_content.replace("{{result_message}}", &result_message);
+    let hide_form = updated_html.replace("{{class}}", &toggle_form);
+
+    Html(hide_form)
+}
+
+
