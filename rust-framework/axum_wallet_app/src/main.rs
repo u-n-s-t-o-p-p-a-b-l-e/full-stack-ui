@@ -7,6 +7,7 @@ use std::fs;
 
 use std::net::SocketAddr;
 use tower::ServiceBuilder;
+use tower_http::services::ServeDir;
 use tower_http::trace::TraceLayer;
 
 mod register;
@@ -21,6 +22,7 @@ async fn main() {
         .route("/", get(index_page))
         .route("/register", get(show_register_form))
         .route("/register", post(process_registration))
+        .nest_service("/css", ServeDir::new("src/css"))
         .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()));
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
