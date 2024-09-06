@@ -1,0 +1,16 @@
+.show_form {
+	display: block;
+	color: blue;
+	font-size: 20px;
+}
+
+.hide_form {
+	display: none;
+	color: red;
+	font-weight: bold;
+	font-size: 50px;
+}
+
+h1 {
+	color: green;
+}
