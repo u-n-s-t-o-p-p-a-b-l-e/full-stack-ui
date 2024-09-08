@@ -7,7 +7,7 @@ use std::fs;
 
 #[derive(Deserialize)]
 pub struct RegisterForm {
-    pub mobile_no: String,
+    pub mobile_no: String
 }
 
 pub async fn show_register_form() -> impl IntoResponse {
