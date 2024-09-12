@@ -1,8 +1,17 @@
+use axum::{
+    body::Bytes,
+    extract::Multipart,
+    response::{Html, IntoResponse},
+    http::StatusCode,
+};
+use tokio::fs::File;
+use tokio::io::AsyncWriteExt;
+
 async fn upload_image(mut multipart: Multipart) -> impl IntoResponse {
     while let Some(field) = multipart.next_field().await.unwrap() {
         let name = field.name().unwrap().to_string();
 
-        if name = "file" {
+        if name == "file" {
             let filename = field.file_name().unwrap().to_string();
             let data = field.bytes().await.unwrap();
 

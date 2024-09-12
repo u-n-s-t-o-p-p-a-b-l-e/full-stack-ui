@@ -1,3 +1,5 @@
+mod upload;
+
 use axum::{
     routing::{get, post},
     response::{Html, IntoResponse},
@@ -15,6 +17,7 @@ use register::{
     show_register_form,
     process_registration 
 };
+
 
 #[tokio::main]
 async fn main() {
