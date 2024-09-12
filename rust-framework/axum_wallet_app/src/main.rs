@@ -1,5 +1,5 @@
 mod upload;
-
+use crate::upload::upload_image;
 use axum::{
     routing::{get, post},
     response::{Html, IntoResponse},
@@ -25,7 +25,7 @@ async fn main() {
         .route("/", get(index_page))
         .route("/register", get(show_register_form))
         .route("/register", post(process_registration))
-        .route("/", get(show_upload_form))
+        .route("/upload", get(show_upload_form))
         .route("/upload", axum::routing::post(upload_image))
         .nest_service("/css", ServeDir::new("src/css"))
         .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()));

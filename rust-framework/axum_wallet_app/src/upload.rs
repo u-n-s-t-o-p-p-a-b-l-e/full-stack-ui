@@ -7,7 +7,7 @@ use axum::{
 use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 
-async fn upload_image(mut multipart: Multipart) -> impl IntoResponse {
+pub async fn upload_image(mut multipart: Multipart) -> impl IntoResponse {
     while let Some(field) = multipart.next_field().await.unwrap() {
         let name = field.name().unwrap().to_string();
 
