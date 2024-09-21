@@ -1,3 +1,5 @@
+mod upload;
+use crate::upload::upload_image;
 use axum::{
     routing::{get, post},
     response::{Html, IntoResponse},
@@ -16,12 +18,15 @@ use register::{
     process_registration 
 };
 
+
 #[tokio::main]
 async fn main() {
     let app = Router::new()
         .route("/", get(index_page))
         .route("/register", get(show_register_form))
         .route("/register", post(process_registration))
+        .route("/upload", get(show_upload_form))
+        .route("/upload", axum::routing::post(upload_image))
         .nest_service("/css", ServeDir::new("src/css"))
         .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()));
 
@@ -37,4 +42,8 @@ pub async fn index_page() -> impl IntoResponse {
     let html_content = fs::read_to_string("src/index.html")
         .expect("Failed to read HTML file");
     Html(html_content)
+}
+
+async fn show_upload_form() -> impl IntoResponse {
+    Html(include_str!("upload.html"))
 }
